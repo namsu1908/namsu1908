@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NAMSU1908 – Studios</title>
+  <!-- Favicon: company logo -->
+  <link rel="icon" type="image/png" href="logo-namsu1908.png"/>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Roboto for headings and body -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f5f7fa;
+      color: #23272f;
+    }
+    .main-accent {
+      color: #2e6cff;
+    }
+    .main-accent-bg {
+      background: #2e6cff;
+    }
+    .main-section {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 32px 0 rgba(50, 60, 100, 0.07);
+    }
+    .hero-section {
+      background: linear-gradient(110deg, #e8f0ff 0%, #f5f7fa 100%);
+    }
+    .btn-primary {
+      background: #2e6cff;
+      color: #fff;
+      border-radius: 9999px;
+      transition: background 0.2s;
+      font-weight: bold;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background: #1844a4;
+      color: #fff;
+    }
+    .card-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    .card-desc {
+      color: #555e6c;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2e6cff;
+      margin-bottom: 2rem;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .section-title { font-size: 1.4rem; }
+      .main-section { border-radius: .75rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-gray-100 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <img src="logo-namsu1908.png" alt="Namsu1908 Logo" class="h-10 w-auto"/>
+      </div>
+      <nav class="hidden md:flex space-x-8 font-semibold text-gray-700" aria-label="Main navigation">
+        <a href="#home" class="hover:text-[#2e6cff] transition">Home</a>
+        <a href="#showcase" class="hover:text-[#2e6cff] transition">Apps</a>
+        <a href="#contact" class="hover:text-[#2e6cff] transition">Contact</a>
+      </nav>
+      <!-- Mobile nav toggle -->
+      <button id="menu-btn" class="md:hidden p-2 rounded hover:bg-gray-200" aria-label="Open navigation">
+        <i class="fa fa-bars text-2xl text-[#2e6cff]"></i>
+      </button>
+    </div>
+    <!-- Mobile nav menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-3 pt-2 border-t border-gray-100">
+      <nav class="flex flex-col space-y-4 font-semibold text-gray-700">
+        <a href="#home" class="hover:text-[#2e6cff] transition">Home</a>
+        <a href="#showcase" class="hover:text-[#2e6cff] transition">Apps</a>
+        <a href="#contact" class="hover:text-[#2e6cff] transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section min-h-[85vh] flex flex-col items-center justify-center px-4 pt-28 pb-12 text-center">
+    <div class="max-w-xl mx-auto">
+      <!-- Company Logo Above Title -->
+      <img src="logo-namsu1908.png" alt="Namsu1908 Logo" 
+           class="h-40 w-auto mx-auto mb-6"/> <!-- resized and transparent -->
+
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 main-accent" style="letter-spacing:-1px;">
+    
+      </h1>
+      <p class="text-lg md:text-xl font-medium mb-8 text-gray-700">
+        NAMSU1908 is an indie app studio blending inspiration from games and modern technology to create engaging, competitive apps.
+      </p>
+      <a href="#showcase" class="btn-primary px-8 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+        Explore Our Apps
+      </a>
+    </div>
+  </section>
+
+  <!-- App Showcase Section -->
+  <section id="showcase" class="py-20 px-4">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="section-title text-center">App Showcase</h2>
+      <div class="grid gap-10 sm:grid-cols-2">
+        <!-- Who's That Wrestler?! App Card -->
+        <div class="main-section p-8 flex flex-col items-center text-center">
+          <div class="mb-4">
+            <img src="wtwlogo.png" alt="Who's That Wrestler?! App Logo" class="h-20 w-auto mx-auto rounded shadow border border-gray-200 bg-white"/>
+          </div>
+          <h3 class="card-title main-accent mb-2">Who's That Wrestler?!</h3>
+          <p class="card-desc mb-4">
+            Guess the wrestler by their shadow in this ultimate silhouette challenge game! 💪👤
+          </p>
+          <a href="#" class="btn-primary px-6 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            Download Now
+          </a>
+        </div>
+        <!-- Coming Soon Card -->
+        <div class="main-section p-8 flex flex-col items-center text-center opacity-90">
+          <div class="mb-4">
+            <i class="fa fa-gamepad text-5xl text-[#2e6cff]"></i>
+          </div>
+          <h3 class="card-title text-[#2e6cff] mb-2">Coming Soon</h3>
+          <p class="card-desc mb-4">
+            More competitive, creative apps are on the way.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-4 bg-[#f2f5fa]">
+    <div class="container mx-auto max-w-xl">
+      <h2 class="section-title text-center">Contact Us</h2>
+      <p class="text-center mb-6 text-gray-700 font-medium">
+        Email: <a href="mailto:namsu1908studios@gmail.com" class="main-accent hover:underline">namsu1908studios@gmail.com</a>
+      </p>
+      <form id="contactForm" class="space-y-5 main-section p-6" autocomplete="off" aria-label="Contact form">
+        <div>
+          <label for="name" class="block font-bold mb-1 main-accent">Name</label>
+          <input type="text" id="name" name="name" required
+                 class="w-full px-4 py-2 rounded border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200 bg-[#f7faff] text-gray-800"
+                 aria-required="true" aria-label="Your Name"/>
+        </div>
+        <div>
+          <label for="email" class="block font-bold mb-1 main-accent">Email</label>
+          <input type="email" id="email" name="email" required
+                 class="w-full px-4 py-2 rounded border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200 bg-[#f7faff] text-gray-800"
+                 aria-required="true" aria-label="Your Email"/>
+        </div>
+        <div>
+          <label for="message" class="block font-bold mb-1 main-accent">Message</label>
+          <textarea id="message" name="message" rows="4" required
+                    class="w-full px-4 py-2 rounded border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-200 bg-[#f7faff] text-gray-800"
+                    aria-required="true" aria-label="Your Message"></textarea>
+        </div>
+        <button type="submit"
+                class="w-full py-3 btn-primary text-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+          Send Message
+        </button>
+        <div id="formMessage" class="mt-2 text-center text-sm"></div>
+      </form>
+      <div class="flex justify-center space-x-6 mt-8 text-2xl">
+        <!-- Placeholder social links -->
+        <a href="#" aria-label="Twitter" class="main-accent hover:text-[#1844a4] transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" class="main-accent hover:text-[#1844a4] transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn" class="main-accent hover:text-[#1844a4] transition"><i class="fab fa-linkedin"></i></a>
+        <a href="#" aria-label="GitHub" class="main-accent hover:text-[#1844a4] transition"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-white text-gray-400 text-center text-sm border-t border-gray-100">
+    &copy; <span id="year"></span> Namsu1908. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for interactivity & animations -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if(this.hash) {
+          e.preventDefault();
+          const el = document.querySelector(this.hash);
+          if(el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+            if(window.innerWidth < 768) mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+
+    // Fade-in on scroll
+    function fadeInOnScroll() {
+      const fadeEls = document.querySelectorAll('.fade-in');
+      if (!('IntersectionObserver' in window)) {
+        fadeEls.forEach(el => el.classList.add('visible'));
+        return;
+      }
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      fadeEls.forEach(el => observer.observe(el));
+    }
+    window.addEventListener('DOMContentLoaded', fadeInOnScroll);
+
+    // Simple Contact Form Handler (Demo Only)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('formMessage').textContent = "Thank you for reaching out! We'll get back to you soon.";
+      this.reset();
+    });
+
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
