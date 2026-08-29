@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wrestling Warfare – NAMSU1908</title>
+  <!-- Favicon: company logo -->
+  <link rel="icon" type="image/png" href="logo-namsu1908.png"/>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Roboto & Russo One -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Russo+One&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #000000;
+      color: #f4f4f5;
+    }
+    .font-wrestling {
+      font-family: 'Russo One', 'Impact', sans-serif;
+    }
+    /* Subtle radial neon background glow */
+    .bg-neon-glow {
+      background: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.07) 0%, rgba(59, 130, 246, 0.07) 50%, #000000 100%);
+    }
+    /* Smooth transition for active nav */
+    .nav-active {
+      border-bottom: 2px solid #ef4444;
+      text-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-neon-glow min-h-screen flex flex-col selection:bg-red-600 selection:text-white">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/85 backdrop-blur-md border-b border-zinc-900 shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <a href="index.html#home" class="flex items-center">
+          <img src="logo-namsu1908.png" alt="Namsu1908 Logo" class="h-10 w-auto brightness-200 contrast-200 invert"/>
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-8 font-semibold text-zinc-400" aria-label="Main navigation">
+        <a href="index.html#home" class="hover:text-zinc-200 transition duration-200">Home</a>
+        <a href="wrestling-warfare.html" class="text-white nav-active pb-1">Wrestling Warfare</a>
+        <a href="index.html#showcase" class="hover:text-zinc-200 transition duration-200">Apps</a>
+        <a href="index.html#contact" class="hover:text-zinc-200 transition duration-200">Contact</a>
+      </nav>
+      <!-- Mobile nav toggle -->
+      <button id="menu-btn" class="md:hidden p-2 rounded hover:bg-zinc-900 transition-colors duration-200" aria-label="Open navigation">
+        <i class="fa fa-bars text-2xl text-red-900"></i>
+      </button>
+    </div>
+
+    <!-- Mobile nav menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-zinc-950 px-4 pb-3 pt-2 border-t border-zinc-900">
+      <nav class="flex flex-col space-y-4 font-semibold text-zinc-400">
+        <a href="index.html#home" class="hover:text-zinc-200 transition duration-200">Home</a>
+        <a href="wrestling-warfare.html" class="text-white transition duration-200">Wrestling Warfare</a>
+        <a href="index.html#showcase" class="hover:text-zinc-200 transition duration-200">Apps</a>
+        <a href="index.html#contact" class="hover:text-zinc-200 transition duration-200">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-28 pb-16 px-4">
+    
+    <!-- Hero / Title Section -->
+    <section class="max-w-4xl mx-auto text-center flex flex-col items-center justify-center py-8 sm:py-12">
+      <!-- Animated Logo Container -->
+      <div class="relative w-full max-w-md sm:max-w-lg mb-8 flex justify-center">
+        <!-- Glow effect behind logo -->
+        <div class="absolute inset-0 bg-gradient-to-r from-red-600/20 to-blue-600/20 rounded-2xl blur-3xl opacity-60"></div>
+        <img src="wrestlingwarfarelogo.png" alt="Wrestling Warfare Logo" 
+             class="relative z-10 w-full h-auto max-h-[250px] sm:max-h-[300px] object-contain rounded-xl"/>
+      </div>
+      
+      <!-- Description -->
+      <p class="text-lg sm:text-xl text-black font-medium max-w-3xl leading-relaxed px-4">
+        Wrestling Warfare is the ultimate wrestling simulation game where you call the shots! Book dream matches, create unforgettable shows, build intense rivalries, and take complete control of your promotion as you battle your way to the top.
+      </p>
+    </section>
+
+    <!-- Interactive Sections (Download & Discord) -->
+    <section class="max-w-4xl mx-auto mt-16 sm:mt-24 grid gap-12 sm:grid-cols-2">
+      
+      <!-- Download Section -->
+      <div class="group relative p-8 flex flex-col justify-between items-center text-center">
+         <!-- Glow accent hover effect -->        
+        <div>
+        <a href="#" class="inline-flex items-center justify-center space-x-3 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-red-600/20 hover:shadow-red-600/40 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-xs">
+          <i class="fa-brands fa-apple text-2xl"></i>
+          <span class="text-left leading-none">
+            <span class="block text-[10px] uppercase tracking-wider opacity-75 font-normal">Download on the</span>
+            <span class="block text-lg font-bold">App Store</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Discord Section -->
+      <div class="group relative p-8 flex flex-col justify-between items-center text-center">
+          <!-- Glow accent hover effect -->
+        
+        <div>
+        <a href="#" class="inline-flex items-center justify-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-xs">
+          <i class="fa-brands fa-discord text-2xl"></i>
+          <span class="text-left leading-none">
+            <span class="block text-[10px] uppercase tracking-wider opacity-75 font-normal">Connect on</span>
+            <span class="block text-lg font-bold">Discord</span>
+          </span>
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-zinc-950 text-zinc-500 text-center text-sm border-t border-zinc-900">
+    <div class="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        &copy; <span id="year"></span> Namsu1908. All rights reserved.
+      </div>
+      <a href="index.html#home" class="hover:text-zinc-300 transition duration-200">
+        Back to Namsu1908 Studios
+      </a>
+    </div>
+  </footer>
+
+  <!-- Interactivity Script -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
