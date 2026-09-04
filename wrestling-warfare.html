@@ -30,6 +30,12 @@
       border-bottom: 2px solid #ef4444;
       text-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
     }
+    /* Wrestler silhouette glow to separate black shirt from black background */
+    .wrestler-glow {
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2))
+              drop-shadow(0 0 35px rgba(239, 68, 68, 0.55))
+              drop-shadow(0 0 60px rgba(59, 130, 246, 0.35));
+    }
   </style>
 </head>
 <body class="bg-neon-glow min-h-screen flex flex-col selection:bg-red-600 selection:text-white">
@@ -82,62 +88,75 @@
       <p class="text-lg sm:text-xl text-black font-medium max-w-3xl leading-relaxed px-4">
         Wrestling Warfare is a mobile-friendly wrestling simulation game where you call the shots! Book dream matches, create unforgettable shows, build intense rivalries, and take control of your promotion as you battle your way to the top!
       </p>
+
+      <!-- Wrestler Character Image with Glow Effect -->
+      <div class="relative w-full max-w-sm sm:max-w-md mx-auto mt-8 sm:mt-10 flex justify-center items-center">
+        <!-- Ambient atmospheric glow behind wrestler -->
+        <div class="absolute inset-0 bg-gradient-to-t from-red-600/20 via-blue-600/15 to-transparent rounded-full blur-3xl opacity-75 pointer-events-none"></div>
+        <img src="wrestler.png" alt="Wrestling Warfare Superstar" 
+             class="relative z-10 w-auto max-h-[420px] sm:max-h-[500px] md:max-h-[560px] object-contain wrestler-glow transition-transform duration-500 hover:scale-[1.02]"/>
+      </div>
+
+      <!-- Value Proposition -->
+      <p class="font-wrestling text-lg sm:text-xl md:text-2xl text-black tracking-wider uppercase mt-6 sm:mt-8 px-4">
+        <span class="text-red-500">NO</span> ads. <span class="text-red-500">NO</span> subscriptions. <span class="text-red-500">NO</span> Pay-To-Win.
+      </p>
     </section>
 
     <!-- Interactive Sections (Download & Discord) -->
-    <section class="max-w-4xl mx-auto mt-16 sm:mt-24 grid gap-12 sm:grid-cols-2">
+    <section class="max-w-4xl mx-auto mt-12 sm:mt-16 grid gap-12 sm:grid-cols-2">
       
       <!-- Download Section -->
       <div class="group relative p-8 flex flex-col justify-between items-center text-center">
-         <!-- Glow accent hover effect -->        
+        <!-- Glow accent hover effect -->        
         <div>
-        <a href="https://apps.apple.com/gb/app/wrestling-warfare/id6795998440" class="inline-flex items-center justify-center space-x-3 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-red-600/20 hover:shadow-red-600/40 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-xs">
-          <i class="fa-brands fa-apple text-2xl"></i>
-          <span class="text-left leading-none">
-            <span class="block text-[10px] uppercase tracking-wider opacity-75 font-normal">Download on the</span>
-            <span class="block text-lg font-bold">App Store</span>
-          </span>
-        </a>
+          <a href="https://apps.apple.com/gb/app/wrestling-warfare/id6795998440" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center space-x-3 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-red-600/20 hover:shadow-red-600/40 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-xs">
+            <i class="fa-brands fa-apple text-2xl"></i>
+            <span class="text-left leading-none">
+              <span class="block text-[10px] uppercase tracking-wider opacity-75 font-normal">Download on the</span>
+              <span class="block text-lg font-bold">App Store</span>
+            </span>
+          </a>
+        </div>
       </div>
 
       <!-- Discord Section -->
       <div class="group relative p-8 flex flex-col justify-between items-center text-center">
-          <!-- Glow accent hover effect -->
-        
+        <!-- Glow accent hover effect -->
         <div>
-        <a href="https://discord.gg/asQECFtEU" class="inline-flex items-center justify-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-xs">
-          <i class="fa-brands fa-discord text-2xl"></i>
-          <span class="text-left leading-none">
-            <span class="block text-[10px] uppercase tracking-wider opacity-75 font-normal">Connect on</span>
-            <span class="block text-lg font-bold">Discord</span>
-          </span>
-        </a>
+          <a href="https://discord.gg/asQECFtEU" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 transition-all duration-300 transform hover:-translate-y-1 w-full max-w-xs">
+            <i class="fa-brands fa-discord text-2xl"></i>
+            <span class="text-left leading-none">
+              <span class="block text-[10px] uppercase tracking-wider opacity-75 font-normal">Connect on</span>
+              <span class="block text-lg font-bold">Discord</span>
+            </span>
+          </a>
+        </div>
       </div>
 
     </section>
-        <!-- Screenshots Section -->
-        <section class="max-w-4xl mx-auto mt-16 sm:mt-24">
-          <div class="bg-zinc-950/40 border border-zinc-900 rounded-2xl p-8 text-center shadow-lg">
-            <h2 class="font-wrestling text-2xl sm:text-3xl text-zinc-300 tracking-wider uppercase mb-8">Download now on App Store!</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-              <div class="overflow-hidden rounded-lg border border-zinc-800 shadow-md hover:border-red-600/30 hover:scale-105 transition-all duration-300">
-                <img src="1.png" alt="Gameplay Screen 1" class="w-full h-auto object-cover"/>
-              </div>
-              <div class="overflow-hidden rounded-lg border border-zinc-800 shadow-md hover:border-blue-600/30 hover:scale-105 transition-all duration-300">
-                <img src="2.png" alt="Gameplay Screen 2" class="w-full h-auto object-cover"/>
-              </div>
-              <div class="overflow-hidden rounded-lg border border-zinc-800 shadow-md hover:border-red-600/30 hover:scale-105 transition-all duration-300">
-                <img src="3.png" alt="Gameplay Screen 3" class="w-full h-auto object-cover"/>
-              </div>
-              <div class="overflow-hidden rounded-lg border border-zinc-800 shadow-md hover:border-blue-600/30 hover:scale-105 transition-all duration-300">
-                <img src="4.png" alt="Gameplay Screen 4" class="w-full h-auto object-cover"/>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
 
+    <!-- Screenshots Section -->
+    <section class="max-w-4xl mx-auto mt-12 sm:mt-16">
+      <div class="bg-zinc-950/40 border border-zinc-900 rounded-2xl p-8 text-center shadow-lg">
+        <h2 class="font-wrestling text-2xl sm:text-3xl text-zinc-300 tracking-wider uppercase mb-8">Download now on App Store!</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div class="overflow-hidden rounded-lg border border-zinc-800 shadow-md hover:border-red-600/30 hover:scale-105 transition-all duration-300">
+            <img src="1.png" alt="Gameplay Screen 1" class="w-full h-auto object-cover"/>
+          </div>
+          <div class="overflow-hidden rounded-lg border border-zinc-800 shadow-md hover:border-blue-600/30 hover:scale-105 transition-all duration-300">
+            <img src="2.png" alt="Gameplay Screen 2" class="w-full h-auto object-cover"/>
+          </div>
+          <div class="overflow-hidden rounded-lg border border-zinc-800 shadow-md hover:border-red-600/30 hover:scale-105 transition-all duration-300">
+            <img src="3.png" alt="Gameplay Screen 3" class="w-full h-auto object-cover"/>
+          </div>
+          <div class="overflow-hidden rounded-lg border border-zinc-800 shadow-md hover:border-blue-600/30 hover:scale-105 transition-all duration-300">
+            <img src="4.png" alt="Gameplay Screen 4" class="w-full h-auto object-cover"/>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
